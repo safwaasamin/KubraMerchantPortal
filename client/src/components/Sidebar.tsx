@@ -52,7 +52,7 @@ const Sidebar: React.FC = () => {
             <Link
               key={link.href}
               href={link.href}
-              className={`sidebar-nav-link ${
+              className={`sidebar-nav-link group ${
                 (location === link.href || 
                 (link.href !== "/" && location.startsWith(link.href)))
                   ? "active"
