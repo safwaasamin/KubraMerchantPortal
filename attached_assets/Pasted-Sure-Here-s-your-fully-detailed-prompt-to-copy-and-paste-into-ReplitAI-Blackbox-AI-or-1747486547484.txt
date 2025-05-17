@@ -1,0 +1,184 @@
+Sure! Here's your **fully detailed prompt** to copy and paste into **ReplitAI**, **Blackbox AI**, or any code generation tool to build the **merchant side of Kubra Mart**.
+
+---
+
+## ✅ **Prompt to Generate Merchant Side of Kubra Mart**
+
+> **Copy and paste the full prompt below:**
+
+---
+
+Build a complete **Merchant Side Panel** for **Kubra Mart**, an e-commerce platform, using the following tech stack:
+
+* **Backend:** Node.js with Express.js
+* **Frontend:** React.js with React Router
+* **Database:** MySQL
+* **Styling:** HTML, CSS, Bootstrap 5, JavaScript
+
+---
+
+### 🔐 1. **Login Page**
+
+* Form with email and password
+* Forgot password link
+* Validate inputs
+* On successful login, redirect to the dashboard
+* Use JWT for authentication
+* Store token in localStorage
+
+---
+
+### 🏠 2. **Home / Dashboard**
+
+* Show stats: Total Orders, Sales, Rentals, Products
+* Revenue graph (Chart.js or Recharts)
+* Notifications section
+* Sidebar navigation and top navbar with profile/logout
+
+---
+
+### 📦 3. **Products Page**
+
+* Table listing:
+
+  * Product Name
+  * Image
+  * Category
+  * Price
+  * Stock
+  * Status (Active/Inactive)
+  * Actions: Edit / Delete
+* “Add Product” button
+* Search and filter bar
+* Use modals or pages for add/edit forms
+
+---
+
+### 📝 4. **Edit Product Page**
+
+* Form with fields:
+
+  * Product Name, Description, Category (dropdown), Price, Stock
+  * Status toggle (active/inactive)
+  * Image uploader with preview
+* Save and Cancel buttons
+
+---
+
+### 📑 5. **Orders Page**
+
+* Table with:
+
+  * Order ID
+  * Customer Name
+  * Date
+  * Status (Pending/Delivered/Cancelled)
+  * Total Price
+  * “View” button for details
+* Filter dropdown by status
+
+---
+
+### 📋 6. **Order Details Page**
+
+* Detailed order breakdown:
+
+  * List of products with quantity and price
+  * Customer details (name, address)
+  * Order total, date, and time
+  * Current status with ability to update
+
+---
+
+### 🏪 7. **Shop Information Page**
+
+* View and edit shop info:
+
+  * Shop name
+  * Description
+  * Logo uploader
+  * Shop address
+
+---
+
+### 💵 8. **Sales Page**
+
+* List of completed orders marked as sales
+* Table with:
+
+  * Order ID
+  * Product
+  * Quantity
+  * Total amount
+  * Date
+
+---
+
+### 📦 9. **Rental Page**
+
+* Table of rental products
+
+  * Product name
+  * Customer
+  * Rental period (start - end)
+  * Status (e.g., Active/Returned)
+* Date pickers for rental period
+
+---
+
+### ⚙️ Backend API Routes
+
+* `/api/auth/login` – POST – login and issue JWT
+* `/api/products` – GET, POST, PUT, DELETE – manage merchant products
+* `/api/orders` – GET – fetch all orders for merchant
+* `/api/orders/:id` – GET – get order details
+* `/api/sales` – GET – fetch all sales orders
+* `/api/rentals` – GET – fetch all rental items
+* `/api/shop` – GET, PUT – get/edit merchant’s shop info
+
+---
+
+### 🗃️ MySQL Database Schema (suggested)
+
+**merchants**
+
+* id, email, password, shop\_name, logo, address
+
+**products**
+
+* id, name, description, price, stock, category, image, status, merchant\_id
+
+**orders**
+
+* id, customer\_name, status, total, date, merchant\_id
+
+**order\_items**
+
+* id, order\_id, product\_id, quantity, price
+
+**sales**
+
+* id, order\_id, amount, date
+
+**rentals**
+
+* id, product\_id, customer\_name, start\_date, end\_date, status
+
+---
+
+### 💡 Features to Include
+
+* Modular React components
+* Bootstrap UI (cards, modals, forms, tables)
+* React Router for page navigation
+* JWT auth with protected routes
+* Error handling and loading states
+* Toasts/alerts for success and error messages
+
+---
+
+**Final output should be a working full-stack web application structured cleanly, responsive across devices, and match the UI layout from dashboard, product, order, rental, and shop pages described.**
+
+---
+
+Let me know if you want the project broken down into files or boilerplate code.
